@@ -1,0 +1,30 @@
+[tool.poetry]
+name = "winhtop"
+version = "0.1.0"
+description = ""
+authors = ["Dabz <itzdabbzz@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+psutil = "^6.1.0"
+blessed = "^1.20.0"
+colorama = "^0.4.6"
+
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3.3"
+black = "^24.10.0"
+isort = "^5.13.2"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+wintop = "wintop.main:main"
+
+
+[tool.poe.tasks]
+dev = "python ./winhtop/main.py"
+
